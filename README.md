@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive expense tracker application built with React, TypeScript, Zod for validation, and react-hook-form for form handling. This app lets users add, filter, and delete expenses, with dynamic dark mode and light mode themes.
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Expense Management: Add, delete, and view expenses with a detailed list.
+Category Filter: Filter expenses by categories.
+Dark Mode: Toggle between light and dark mode for better user experience.
+Form Validation: Real-time form validation using Zod and react-hook-form.
 
-## Expanding the ESLint configuration
+# Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+-React with TypeScript
+-React Hook Form for form handling
+-Zod for schema-based validation
+-Bootstrap for styling
+-Custom CSS for additional styling
 
-- Configure the top-level `parserOptions` property like this:
+# Components
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+-App: Main component managing state and layout, including theme and user interactions.
+-ExpenseList: Displays a list of expenses in a styled table with delete options.
+-ExpenseForm: Handles form submission and input validation for adding expenses.
+-ExpenseFilter: Allows users to filter expenses by selected category.
+-Darkmode: Toggle button to switch between dark and light modes.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# Dark Mode Styling
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+The dark and light modes are applied by toggling CSS classes in darkmode.css, which style backgrounds, tables, and form inputs.
